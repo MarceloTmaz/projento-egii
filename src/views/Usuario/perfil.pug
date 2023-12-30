@@ -1,0 +1,7 @@
+include ../template
+h1#perfil Perfil
+h3(id="nomeusuario", name="nomeusuario") #{dados.nome}
+h3(id="emailusuario", name="emailusuario") #{dados.email}
+h3(id="nickUsuario", name="nickUsuario") #{dados.nick}
+a(href="/usuario/atualizar")
+      button(id="atualizar")  Atualizar dados

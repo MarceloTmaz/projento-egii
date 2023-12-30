@@ -1,0 +1,55 @@
+include ../template
+
+table
+  tr
+    td(colspan='1') 
+      form(action="/tarefa/listar", method="get")
+        button(type="submit" class="btn btn-outline-secondary") ordem criada
+    td(colspan='1') 
+      form(action="/tarefa/listar_ordenada", method="get")
+        button(type="submit" class="btn btn-outline-secondary") ordem de importancia
+
+table 
+   
+    each i in dados.total
+      tr  
+        td(colspan='1') 
+          h3 Nome: 
+        td(colspan='1') 
+          h1(id=i.getNome(), name=i.getNome()) #{i.getNome()}
+      tr  
+        td(colspan='1') 
+          h3 Descrição: 
+        td(colspan='1') 
+          h3(id=i.getDesc(), name=i.getDesc()) #{i.getDesc()}
+      tr 
+        td(colspan='1') 
+          h3 Importancia: 
+        td(colspan='1') 
+          h4(id=i.getNome()+i.getId(),name=i.getImportancia()) #{i.getImportancia()}
+      tr 
+        td(colspan='1') 
+          h3 Convidado: 
+        td(colspan='1') 
+            p #{i.getConvidado()}
+      tr 
+        td(colspan='1') 
+          h3 Estado: 
+        td(colspan='1') 
+         if i.getConclu() == true
+            h6 Concluido.
+         else
+            h6 Não Concluido.
+      tr 
+        td(colspan='1') 
+          h3 Opções: 
+        td(colspan='1') 
+          form(action="/tarefa/trocaStatus", method="post")
+            input(type="number", id="id", name="id", value=i.getId(),  hidden)
+            button(type="submit" class="btn btn-outline-secondary") Trocar status
+          form(action="/tarefa/AtualizarTarefa", method="post")
+            input(type="number", id="idC", name="idC", value=i.getId(),  hidden)
+            button(type="submit" class="btn btn-outline-secondary") Atualizar convidado
+          form(action="/tarefa/removerTarefa", method="post")
+            input(type="number", id="idR", name="idR", value=i.getId(),  hidden)
+            button(type="submit" class="btn btn-outline-secondary") Remover Tarefa
