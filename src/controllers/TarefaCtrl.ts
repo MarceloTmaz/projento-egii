@@ -50,17 +50,20 @@ export class TarefaCtrl{
         let id=req.body.idC
         let idConv:number=+id
         let i:number
-        let _vetTare2: Tarefa[]=[];
+        let tarefa:Tarefa=new Tarefa("","","",0,0)
         for(i = 0;i<this._vetTare.length;i++) {
             if(this._vetTare[i].getId()==idConv){
-                _vetTare2.push(this._vetTare[i])
+                //_vetTare2.push(this._vetTare[i])
+                tarefa=this._vetTare[i]
             }
         }
          const dados={
             'id':id,
-            'total':_vetTare2  
+            'nome':tarefa.getNome(),
+            'descricao':tarefa.getDesc(),
+            'importancia':tarefa.getImportancia(),
+            'convidado':tarefa.getConvidado()
         }
-        console.log(id)
         res.render('Tarefa/atualizar',{dados})
        
     }
