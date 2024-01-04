@@ -51,3 +51,12 @@ Como usuário quero poder remover tarefas .
 - critério de aceitação:
   - Deve haver um campo que permita remover cada tarefa individualmente.
   - quando removida de ser exibida a lista de tarefas restante.
+
+# Instalação e execução
+- Para efetuar a instalação: npm install
+- Para executar: npm run dev 
+
+# Comado de Teste:
+- Teste de unidade: npx jest __tests__/unit
+- Teste de aceitação:  npx jest __tests__/acceptance
+- Teste de integração: npx jest __tests__/integration
