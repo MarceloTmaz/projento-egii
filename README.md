@@ -64,6 +64,6 @@ Como usuário quero poder remover tarefas .
  # Tabela com Endpoints da API mockada
  |Método |URL|Descrição
  | - | - | - |
- |GET|/usuario/:email3||retorna o nome do usuário 
+ |GET|/usuario/:email3|retorna o nome do usuário 
  |GET|/tarefa/:id|retorna estado da tarefa atualizado
 
