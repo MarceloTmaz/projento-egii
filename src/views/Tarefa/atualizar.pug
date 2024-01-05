@@ -9,10 +9,10 @@ form(action="/tarefa/Atualizar_Tarefa", method="post")
             input(type="text", id="descricao2", name="descricao2",value=dados.descricao, placeholder="Digite a descrição")
             p
             label(for="impotancia") Importancia:
-            input(type="number", min="1" max="3" id="impotancia2", name="impotancia2",value=dados.importancia, placeholder="Digite a descrição")
+            input(type="number", min="1" max="3" id="impotancia2", name="impotancia2",value=dados.importancia, placeholder="Digite a importancia")
             p
             label(for="email") E-mail:
             input(type="email", id="email2", name="email2", placeholder="Digite o e-mail")
             input(type="number", id="idCo", name="idCo", value=dados.id,  hidden)
             p
-            button(type="submit" class="btn btn-outline-primary") Enviar
+            button(type="submit" class="btn btn-outline-primary", id ="atualizar") Enviar
