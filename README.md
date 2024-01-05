@@ -60,3 +60,10 @@ Como usuário quero poder remover tarefas .
 - Teste de unidade: npx jest __tests__/unit
 - Teste de aceitação:  npx jest __tests__/acceptance
 - Teste de integração: npx jest __tests__/integration
+
+ # Tabela com Endpoints da API mockada
+ |Método |URL|Descrição
+ | - | - | - |
+ |GET|/usuario/:email3||retorna o nome do usuário 
+ |GET|/tarefa/:id|retorna estado da tarefa atualizado
+
