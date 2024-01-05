@@ -22,7 +22,7 @@ describe('Tarefa', ()=>{
         expect(await importancia.getText()).toEqual('3');
     });
 
-    it('deve permitir a criação de tarefas', async ()=>{
+    it('deve permitir a alteração de tarefas', async ()=>{
         let driver = await new Builder().forBrowser('chrome').build();
 
         await driver.get('http://localhost:3000/tarefa/listar');  
