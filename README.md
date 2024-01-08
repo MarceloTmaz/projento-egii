@@ -39,7 +39,7 @@ Como usuário quero atualizar as tarefas já cadastrada.
   - O sistema deve validar as mundaca o mais rápido possível.
 ## História 4
 Como usuário quero poder mudar o estado de uma tarefa
-critério de aceitação:
+-critério de aceitação:
   - cada tarefa deve possuir uma forma fácil de alteração.
   - ao modificar o sistema deve mostrar imediatamente.
 ## História 5
