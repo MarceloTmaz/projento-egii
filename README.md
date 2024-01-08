@@ -39,13 +39,13 @@ Como usuário quero atualizar as tarefas já cadastrada.
   - O sistema deve validar as mundaca o mais rápido possível.
 ## História 4
 Como usuário quero poder mudar o estado de uma tarefa
-critério de aceitação:
+- critério de aceitação:
   - cada tarefa deve possuir uma forma fácil de alteração.
   - ao modificar o sistema deve mostrar imediatamente.
 ## História 5
 Como usuário quero poder ordenar minhas tarefas por ordem de importância
 - critério de aceitação:
-  - Deve haver um campo que permita ordenar e voltar a ordem inicial.
+  - Deve haver um campo que permita ordenar.
 ## História 6 
 Como usuário quero poder remover tarefas .
 - critério de aceitação:
@@ -60,3 +60,10 @@ Como usuário quero poder remover tarefas .
 - Teste de unidade: npx jest __tests__/unit
 - Teste de aceitação:  npx jest __tests__/acceptance
 - Teste de integração: npx jest __tests__/integration
+
+ # Tabela com Endpoints da API mockada
+ |Método |URL|Descrição
+ | - | - | - |
+ |GET|/usuario/:email3|retorna o nome do usuário 
+ |GET|/tarefa/:id|retorna estado da tarefa atualizado
+
