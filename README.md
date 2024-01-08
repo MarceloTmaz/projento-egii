@@ -45,7 +45,7 @@ critério de aceitação:
 ## História 5
 Como usuário quero poder ordenar minhas tarefas por ordem de importância
 - critério de aceitação:
-  - Deve haver um campo que permita ordenar e voltar a ordem inicial.
+  - Deve haver um campo que permita ordenar.
 ## História 6 
 Como usuário quero poder remover tarefas .
 - critério de aceitação:
