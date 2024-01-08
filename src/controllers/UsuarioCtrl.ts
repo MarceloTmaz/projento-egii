@@ -54,7 +54,6 @@ export class UsuarioCtrl{
     rotaEmail(req:Request,res:Response){
       
         let email=req.params.email3
-        console.log(email)
         let usuario=this.ApiEmail(email)
 
         res.render('Usuario/nomeEmail',{usuario})

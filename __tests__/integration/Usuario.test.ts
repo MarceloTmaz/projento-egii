@@ -13,7 +13,6 @@ describe('get usuario/email',()=>{
             usuario:resultado,
         })
         let resposta=usrCtrl.ApiEmail("tom@gmail.com")
-        console.log(resposta)
         expect(resultado).toEqual(resposta);
     })
 
@@ -26,7 +25,6 @@ describe('get usuario/email',()=>{
             usuario:resultado,
         })
         let resposta=usrCtrl.ApiEmail("tony@gmail.com")
-        console.log(resposta)
         expect(resultado).toEqual(resposta);
     })
 })

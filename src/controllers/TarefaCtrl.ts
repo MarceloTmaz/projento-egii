@@ -155,15 +155,11 @@ export class TarefaCtrl{
                 if( this._vetTare[i].getConclu()==false){
                     this._vetTare[i].setConclu(!this._vetTare[i].getConclu())
                     ret= true;
-                    console.log(1)
                 }else{
                     this._vetTare[i].setConclu(!this._vetTare[i].getConclu())
                     ret= false;
 
-                    console.log(0)
-                }
-                console.log(this._vetTare[i].getConclu())
-              
+                }              
             }
         }
        
