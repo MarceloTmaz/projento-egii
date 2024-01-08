@@ -34,27 +34,27 @@ describe('Tarefas',()=>{
     it('Deve retonar Importancia como 1 como valor minimo',()=>{
         let receber = trfCtrl.limiteImpotancia(1)
         let esperado=1
-        expect(esperado).toBe(receber)
+        expect(receber).toBe(esperado)
     })
     it('Deve retonar Importancia como 3 como valor maximo',()=>{
         let receber = trfCtrl.limiteImpotancia(3)
         let esperado=3
-        expect(esperado).toBe(receber)
+        expect(receber).toBe(esperado)
     })
     it('Deve retonar Importancia como 1 por receber valor inferior',()=>{
         let receber = trfCtrl.limiteImpotancia(0)
         let esperado=1
-        expect(esperado).toBe(receber)
+        expect(receber).toBe(esperado)
     })
     it('Deve retonar Importancia como 3 por receber valor superior',()=>{
         let receber = trfCtrl.limiteImpotancia(4)
         let esperado=3
-        expect(esperado).toBe(receber)
+        expect(receber).toBe(esperado)
     })
     it('Deve retonar Importancia como 2 por receber valor medio',()=>{
         let receber = trfCtrl.limiteImpotancia(2)
         let esperado=2
-        expect(esperado).toBe(receber)
+        expect(receber).toBe(esperado)
     })
     
 

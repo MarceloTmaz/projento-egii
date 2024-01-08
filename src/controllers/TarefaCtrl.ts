@@ -27,7 +27,6 @@ export class TarefaCtrl{
         this._tarefa=new Tarefa(nome,descricao,this._ciar,id,3)
         this,this._tarefa.setConclu(true)
         this._vetTare.push(this._tarefa)
-      //  this._vetTare.constructor()
     }
 
     criar(req:Request,res:Response){
@@ -53,7 +52,6 @@ export class TarefaCtrl{
         let tarefa:Tarefa=new Tarefa("","","",0,0)
         for(i = 0;i<this._vetTare.length;i++) {
             if(this._vetTare[i].getId()==idConv){
-                //_vetTare2.push(this._vetTare[i])
                 tarefa=this._vetTare[i]
             }
         }
@@ -110,18 +108,8 @@ export class TarefaCtrl{
         let id=req.body.id
         let i:number
         this.ApiStautus(id)
-        /*
-        for(i = 0;i<this._vetTare.length;i++) {
-             if(this._vetTare[i].getId()==id){
-                this._vetTare[i].setConclu(!this._vetTare[i].getConclu())
-             }
-         }*/
-        //var tarefaTmp=this._vetTare[id]
-        //tarefaTmp.setConclu(!tarefaTmp.getConclu())
-       // this._vetTare[id]=tarefaTmp
         res.redirect('/tarefa/listar')
     }
-    //ciar um metodo de marca se o atual estado
 
     verificarEstado(req:Request,res:Response){
         let entrada=req.params.id
@@ -167,30 +155,18 @@ export class TarefaCtrl{
                 if( this._vetTare[i].getConclu()==false){
                     this._vetTare[i].setConclu(!this._vetTare[i].getConclu())
                     ret= true;
-                  //  retorno="concluído"
                     console.log(1)
                 }else{
                     this._vetTare[i].setConclu(!this._vetTare[i].getConclu())
                     ret= false;
 
-                    //retorno="não concluído"
                     console.log(0)
                 }
                 console.log(this._vetTare[i].getConclu())
               
             }
-        }/*
-        for(i = 0;i<this._vetTare.length;i++) {
-            console.log(this._vetTare[i].getId())
-             if(this._vetTare[i].getId()==id){
-                this._vetTare[i].setConclu(!this._vetTare[i].getConclu())
-                if( this._vetTare[i].getConclu()){
-                    retorno="concluído"
-                }else{
-                    retorno="não concluído"
-                }
-            }
-         }*/
+        }
+       
         return ret;
     }
 
