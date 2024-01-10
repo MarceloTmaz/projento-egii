@@ -86,10 +86,10 @@ export class TarefaCtrl{
     }
 
 
-
     listar(req:Request, res:Response){
+        this.ordemCriação()
         const dados={
-            'total':this._vetTare,
+            'total':this._ordeado,
             'id':-1
         }
         res.render('Tarefa/lista',{dados})
@@ -166,32 +166,20 @@ export class TarefaCtrl{
         return ret;
     }
 
-
-
     ordemImportancia(){
         let ordem=""
-        this._ordeado=[]
-        for (let i = 0; i < this._vetTare.length; i++) {
-            if(this._ordeado.length>0){
-                for (let l = 0; l < this._ordeado.length; l++) {
-                   if(this._vetTare[i].getImportancia()>this._ordeado[l].getImportancia()){
-                        this._ordeado.push(this._ordeado[this._ordeado.length-1])
-                        for (let k = this._ordeado.length-1; k > l; k--) {        
-                            this._ordeado[k]=this._ordeado[k--];
-                        }
-                        this._ordeado[l]=this._vetTare[i]
-                        break;
-                   }else if(l==this._ordeado.length-1){
-                    this._ordeado.push(this._vetTare[i])
-                   }
-                    
-                }
-            }
-            if(this._ordeado.length==0){
-                this._ordeado.push(this._vetTare[i])
-            }
-           
+        var tarefasOrdenadas: Tarefa[] = this._vetTare.sort((t1, t2) => t2.getImportancia() - t1.getImportancia());
+        this._ordeado=tarefasOrdenadas;
+        for (let i = 0; i < this._ordeado.length; i++) { 
+            ordem+=this._ordeado[i].getId()
         }
+        return ordem
+    }
+
+    ordemCriação(){
+        let ordem=""
+        var tarefasOrdenadas: Tarefa[] = this._vetTare.sort((t1, t2) =>  t1.getId()-t2.getId() );
+        this._ordeado=tarefasOrdenadas;
         for (let i = 0; i < this._ordeado.length; i++) { 
             ordem+=this._ordeado[i].getId()
         }

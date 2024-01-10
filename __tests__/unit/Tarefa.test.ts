@@ -23,6 +23,11 @@ describe('Tarefas',()=>{
         expect(receber).toBe(esperado)
     })
 
+    it('Tarefas deve ser orndenadas de criação',()=>{
+        let receber=trfCtrl.ordemCriação()
+        let esperado="12"
+        expect(receber).toBe(esperado)
+    })
     
     it('Tarefas solicitada deve ser removida',()=>{
         

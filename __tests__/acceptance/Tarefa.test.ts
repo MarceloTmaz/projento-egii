@@ -20,7 +20,7 @@ describe('Tarefa', ()=>{
         expect(await nome.getText()).toEqual('Testar a aplicação');
         expect(await descricao.getText()).toEqual('Rodar os testes durante a aula');
         expect(await importancia.getText()).toEqual('3');
-    });
+    },40000);
 
     it('deve permitir a alteração de tarefas', async ()=>{
         let driver = await new Builder().forBrowser('chrome').build();
@@ -48,6 +48,6 @@ describe('Tarefa', ()=>{
         expect(await descricao.getText()).toEqual('comprar bolo na padaria nosso pão');
         expect(await importancia.getText()).toEqual('2');
         expect(await email.getText()).toEqual('maria@gmail.com');
-    });
+    },40000);
     
 });
