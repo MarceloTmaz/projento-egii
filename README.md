@@ -51,7 +51,11 @@ Como usuário quero poder remover tarefas .
 - critério de aceitação:
   - Deve haver um campo que permita remover cada tarefa individualmente.
   - quando removida de ser exibida a lista de tarefas restante.
-
+## História 7
+Como usuário quero poder ordenar minhas tarefas por ordem de criação
+- critério de aceitação:
+  - Deve haver um campo que permita selecionar para ordenar.
+  - 
 # Instalação e execução
 - Para efetuar a instalação: npm install
 - Para executar: npm run dev 
