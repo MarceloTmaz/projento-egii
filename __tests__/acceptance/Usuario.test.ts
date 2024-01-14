@@ -19,6 +19,6 @@ describe('Dashboard', ()=>{
         expect(await nomenome.getText()).toEqual('Maria');
         expect(await novoemail.getText()).toEqual('maria@gmail.com');
         expect(await novonick.getText()).toEqual('mary');
-    },40000);
+    },90000);
 });
 

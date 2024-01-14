@@ -30,7 +30,10 @@ export class TarefaCtrl{
     }
 
     criar(req:Request,res:Response){
-        res.render('Tarefa/criar')
+        const dados={
+            'titulo':"criar tarefa"
+        }
+        res.render('Tarefa/criar',{dados})
     }
     criarTarefa(req:Request,res:Response){
         this._nom=req.body.nom;
@@ -56,6 +59,7 @@ export class TarefaCtrl{
             }
         }
          const dados={
+            'titulo':"Atualizar tarefa",
             'id':id,
             'nome':tarefa.getNome(),
             'descricao':tarefa.getDesc(),
@@ -89,6 +93,7 @@ export class TarefaCtrl{
     listar(req:Request, res:Response){
         this.ordemCriação()
         const dados={
+            'titulo':"Listar tarefa",
             'total':this._ordeado,
             'id':-1
         }
@@ -98,6 +103,7 @@ export class TarefaCtrl{
     listarOrdenada(req:Request, res:Response){
         this.ordemImportancia()
         const dados={
+            'titulo':"Listar tarefa Ordenada",
             'total':this._ordeado,
             'id':-1
         }
