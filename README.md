@@ -24,37 +24,39 @@ A aplicação foi feita pensando no auxílio e organização de tarefas a serem 
 
 ## História 1
 Como usuário cadastrado quero poder atualizar minhas informações.
-- critério de aceitação:
+- Critério de aceitação:
   - Cada campo deve permitir preenchimento individual.
   - O sistema deve validar as mundaca o mais rápido possível
 ## História 2
 Como usuário do sistema quero poder criar novas tarefas.
-- critério de aceitação:
+- Critério de aceitação:
   - Cada campo deve permitir preenchimento individual.
   - O sistema deve validar as mundaca o mais rápido possível
 ## História 3 
 Como usuário quero atualizar as tarefas já cadastrada. 
-- critério de aceitação:
+- Critério de aceitação:
   - Cada campo deve permitir preenchimento individual.
   - O sistema deve validar as mundaca o mais rápido possível.
 ## História 4
 Como usuário quero poder mudar o estado de uma tarefa
-- critério de aceitação:
-  - cada tarefa deve possuir uma forma fácil de alteração.
-  - ao modificar o sistema deve mostrar imediatamente.
+- Critério de aceitação:
+  - Cada tarefa deve possuir uma forma fácil de alteração.
+  - Ao modificar o sistema deve mostrar imediatamente.
 ## História 5
 Como usuário quero poder ordenar minhas tarefas por ordem de importância
-- critério de aceitação:
+- Critério de aceitação:
   - Deve haver um campo que permita ordenar.
+  - Deve ser exibida a lista de tarefas.
 ## História 6 
 Como usuário quero poder remover tarefas .
-- critério de aceitação:
+- Critério de aceitação:
   - Deve haver um campo que permita remover cada tarefa individualmente.
-  - quando removida de ser exibida a lista de tarefas restante.
+  - Quando removida deve ser exibida a lista de tarefas restante.
 ## História 7
 Como usuário quero poder ordenar minhas tarefas por ordem de criação
-- critério de aceitação:
+- Critério de aceitação:
   - Deve haver um campo que permita selecionar para ordenar.
+  - Deve ser exibida a lista de tarefas
    
 # Instalação e execução
 - Para efetuar a instalação: npm install
